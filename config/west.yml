@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/ftc/     # <--- CHANGE REPO
+      url-base: https://github.com/ftc      # <--- CHANGE REPO
   projects:
     - name: zmk
       remote: zmkfirmware
