@@ -27,33 +27,33 @@
 
 // <--- Mouse --- https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae --->
 
-#define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
-#undef MV_UP
-#undef MV_DN
-#undef MV_LT
-#undef MV_RT
-#define MV_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MV_DN MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define MV_LT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define MV_RT MOVE_HOR(U_MOUSE_MOVE_MAX)
+// #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+// #undef MV_UP
+// #undef MV_DN
+// #undef MV_LT
+// #undef MV_RT
+// #define MV_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+// #define MV_DN MOVE_VERT(U_MOUSE_MOVE_MAX)
+// #define MV_LT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+// #define MV_RT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
-&mmv {
-	time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
-};
+// &mmv {
+// 	time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
+// };
 
-#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
-#undef SC_UP
-#undef SC_DN
-#undef SC_LT
-#undef SC_RT
-#define SC_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SC_DN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SC_LT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SC_RT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+// #define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+// #undef SC_UP
+// #undef SC_DN
+// #undef SC_LT
+// #undef SC_RT
+// #define SC_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+// #define SC_DN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+// #define SC_LT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+// #define SC_RT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 
-&mwh {
-  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
-};
+// &mwh {
+//   time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+// };
 
 // <--- Mouse END --->
 
@@ -139,15 +139,15 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
+                &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &none      &mkp LCLK  	&none       &mkp RCLK   &none
+                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &none      &none       &none       &none       &none
+    &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
+                                         &trans      &mo ADJ1    &trans          &trans     &trans      &trans
+
 //                 &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &mwh SC_UP &mkp LCLK   &mmv MV_UP  &mkp RCLK   &mwh SC_LT
 //                 &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &mwh SC_DN &mmv MV_LT  &mmv MV_DN  &mmv MV_RT  &mwh SC_RT
 //     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
 //                                          &trans      &mo ADJ1    &trans          &trans     &trans      &trans
-
-                &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &none      &none       &none       &none       &none
-                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &none      &none       &none       &none       &none
-    &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
-                                         &trans      &mo ADJ1    &trans          &trans     &trans      &trans
                         >;
                 };
 
