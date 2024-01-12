@@ -19,9 +19,9 @@
 #define BASE  0
 #define NAV   1
 #define SYM   2
-#define ADJ1  3
-#define ADJ2  4
-#define TVP1  5
+#define ADJ   3
+#define TVP1  4
+#define TVP2  5
 
 &mt {
   quick-tap-ms = <100>;
@@ -100,7 +100,7 @@ label= "NAV"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   PSCRN   ┃   SLCK    ┃    PG↓    ┃    INS    ┃    PG↑    ┃   BACK    ┃   ┃     _     ┃     |     ┃     -     ┃     +     ┃     =     ┃     \     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     ▼     ┃   ADJ1    ┃     ▼     ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
+//                                     ┃     ▼     ┃    ADJ    ┃     ▼     ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -113,7 +113,7 @@ label= "NAV"                               ;
                 &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &none      &none       &none       &none       &none
                 &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &none      &none       &none       &none       &none
     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
-                                         &trans      &mo ADJ1    &trans          &trans     &trans      &trans
+                                         &trans      &mo ADJ     &trans          &trans     &trans      &trans
                         >;
                 };
 
@@ -131,7 +131,7 @@ label= "SYM"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   PSCRN   ┃    F9     ┃    F10    ┃    F11    ┃    F12    ┃     (     ┃   ┃     )     ┃     1     ┃     2     ┃     3     ┃     *     ┃     /     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     ▼     ┃     ▼     ┃     ▼     ┃   ┃     ▼     ┃   ADJ2    ┃     0     ┃
+//                                     ┃     ▼     ┃     ▼     ┃     ▼     ┃   ┃     ▼     ┃   TVP1    ┃     0     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -139,7 +139,7 @@ label= "SYM"                              ;
                 &kp F1      &kp F2      &kp F3      &kp F4      &kp LBRC         &kp RBRC    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
                 &kp F5      &kp F6      &kp F7      &kp F8      &kp LBKT         &kp RBKT    &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS
     &kp PSCRN   &kp F9      &kp F10     &kp F11     &kp F12     &kp LPAR         &kp RPAR    &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &KP_SLASH      
-                                        &trans      &trans      &trans           &trans      &mo ADJ2    &kp KP_N0
+                                        &trans      &trans      &trans           &trans      &mo TVP1    &kp KP_N0
                         >;
                 };
 
@@ -148,7 +148,7 @@ label= "SYM"                              ;
 
                 adjust_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "ADJ1"                              ;
+label= "ADJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     *     ┃     (     ┃     )     ┃
@@ -157,7 +157,7 @@ label= "ADJ1"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    F1     ┃    F2     ┃    F3     ┃    F4     ┃    F5     ┃    F6     ┃   ┃    F7     ┃    F8     ┃    F9     ┃    F10    ┃    F11    ┃    F12    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     ▼     ┃     ▼     ┃     ▼     ┃   ┃     ▼     ┃    TVP1   ┃   ENTER   ┃
+//                                     ┃     ▼     ┃     ▼     ┃     ▼     ┃   ┃     ▼     ┃    TVP2   ┃   ENTER   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -165,16 +165,16 @@ label= "ADJ1"                              ;
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT          &kp CARET   &kp AMPS    &kp STAR    &kp LPAR    &kp RPAR
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5             &kp N6      &kp N7      &kp N8      &kp N9      &kp N0  
     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6             &kp F7      &kp F8      &kp F9      &kp F10     &kp F11    &kp F12         
-                                        &trans      &trans      &trans             &trans      &trans      &kp RET
+                                        &trans      &trans      &trans             &trans      &mo TVP2    &kp RET
                         >;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                adjust_layer {
+                tvp1_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "ADJ2"                              ;
+label= "TVP1"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃   BT_0    ┃   ┃     \     ┃     |     ┃     -     ┃   NEXT    ┃   VOLU    ┃
@@ -191,16 +191,16 @@ label= "ADJ2"                              ;
                 &sys_reset  &bt BT_CLR  &out OUT_TOG &none      &trans          &kp BSLH   &kp PIPE   &kp KP_MINUS  &kp C_NEXT  &kp C_VOL_UP
                 &bootloader &bt BT_NXT  &none        &none      &trans          &kp EQUAL  &kp UNDER  &kp KP_PLUS   &kp C_PREV  &kp C_VOL_DN  
     &none       &none       &bt BT_PRV  &none        &none      &trans          &kp CARET  &kp AMPS &kp KP_MULTIPLY &kp LPAR    &kp RPAR   &kp C_PP         
-                                        &trans       &trans     &trans             &trans     &trans     &trans
+                                        &trans       &trans     &trans          &trans     &trans     &trans
                         >;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                tvp1_layer {
+                tvp2_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "TVP1"                              ;
+label= "TVP2"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃ NEXT FILE ┃ MARK IN   ┃ ROTATE    ┃ MARK OUT  ┃ SHOW SNAP ┃   ┃ UNDO/SAVE ┃ REDO/SAV1 ┃  SEL/MOV  ┃TRANS/WARP ┃           ┃
