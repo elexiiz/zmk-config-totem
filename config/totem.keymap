@@ -21,7 +21,6 @@
 #define SYM   2
 #define ADJ   3
 #define TVP1  4
-#define TVP2  5
 
 &mt {
   quick-tap-ms = <100>;
@@ -192,32 +191,6 @@ label= "TVP1"                              ;
                 &bootloader &bt BT_NXT  &none        &none      &trans          &kp EQUAL  &kp UNDER  &kp KP_PLUS   &kp C_PREV  &kp C_VOL_DN  
     &none       &none       &bt BT_PRV  &none        &none      &trans          &kp CARET  &kp AMPS &kp KP_MULTIPLY &kp LPAR    &kp RPAR   &kp C_PP         
                                         &trans       &trans     &trans          &trans     &trans     &trans
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
-                tvp2_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "TVP2"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃ NEXT FILE ┃ MARK IN   ┃ ROTATE    ┃ MARK OUT  ┃ SHOW SNAP ┃   ┃ UNDO/SAVE ┃ REDO/SAV1 ┃  SEL/MOV  ┃TRANS/WARP ┃           ┃
-//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃ TVP II    ┃ LEFT      ┃ PAN       ┃ RIGHT     ┃ PLAY/FLIP ┃   ┃   SOLO    ┃ TOGGLE IN ┃ RESET ROT ┃ TOGGLE OUT┃ TAKE SNAP ┃
-// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃ FULLSCR   ┃ SHIFT     ┃ COPY      ┃ DELETE    ┃ PASTE     ┃ IMG MARK  ┃   ┃  FULLSCR  ┃ CPY2BRUSH ┃ DEL HEAD  ┃ PSTinPLACE┃ BOOK MARK ┃           ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃ LAST KEY  ┃ NEW KEY   ┃ NEXT KEY  ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
-                &kp TAB     &kp I      &kp LC(LALT) &kp O       &kp LC(F20)     &kp LC(F14) &kp LC(F12) &kp LC(F13)  &kp LC(F11) &none
-                &lt TVP2 L  &kp LEFT   &kp LALT     &kp RIGHT   &kp SPACE       &kp LC(F18) &kp LS(I)   &kp LS(HOME) &kp LS(O)   &kp LS(F)
-    &kp J       &kp LSHFT   &kp LC(C)  &kp BSPC     &kp LC(V)   &kp LC(F19)     &kp J       &kp LS(C)   &kp LC(F16)  &kp LS(V)   &kp LC(F15) &none        
-                                       &kp LS(C)    &kp LC(F16) &kp LS(V)       &trans      &trans      &trans
                         >;
                 };
         };
