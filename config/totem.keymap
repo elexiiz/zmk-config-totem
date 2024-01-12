@@ -16,12 +16,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
-#define TVP1 4
-#define TVP2 5
+#define BASE  0
+#define NAV   1
+#define SYM   2
+#define ADJ1  3
+#define TVP1  4
+#define TVP2  5
 
 &mt {
   quick-tap-ms = <100>;
@@ -100,7 +100,7 @@ label= "NAV"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   PSCRN   ┃   SLCK    ┃    PG↓    ┃    INS    ┃    PG↑    ┃   BACK    ┃   ┃     _     ┃     |     ┃     -     ┃     +     ┃     =     ┃     \     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     ▼     ┃    ADJ    ┃     ▼     ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
+//                                     ┃     ▼     ┃   ADJ1    ┃     ▼     ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -113,7 +113,7 @@ label= "NAV"                               ;
                 &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &none      &none       &none       &none       &none
                 &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &none      &none       &none       &none       &none
     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
-                                         &trans      &mo ADJ     &trans          &trans     &trans      &trans
+                                         &trans      &mo ADJ1    &trans          &trans     &trans      &trans
                         >;
                 };
 
@@ -131,7 +131,7 @@ label= "SYM"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
+//                                     ┃           ┃    GIF    ┃   ADJ1    ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -139,16 +139,16 @@ label= "SYM"                               ;
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp RA(U)   &kp SQT     &kp DQT       
                 &kp RA(A)   &trans      &kp RA(S)   &trans      &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O) 
     &trans      &kp RA(F18) &kp RA(F19) &trans      &trans      &trans          &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT  &kp BSLH   &trans         
-                                        &trans      &gif        &mo ADJ         &trans      &kp C_PP    &trans      
+                                        &trans      &gif        &mo ADJ1        &trans      &kp C_PP    &trans      
                         >;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                adjust_layer {
+                adj1_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "ADJ"                               ;
+label= "ADJ1"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
