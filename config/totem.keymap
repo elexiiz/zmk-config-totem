@@ -111,7 +111,7 @@ label= "NAV"                               ;
 //                                          &trans      &mo ADJ1    &trans          &trans     &trans      &trans
 
                 &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &none      &none       &none       &none       &none
-                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &none      &none       &none       &none       &none
+                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LS(Z)       &none      &none       &none       &none       &none
     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
                                          &trans      &mo ADJ1    &trans          &trans     &trans      &trans
                         >;
