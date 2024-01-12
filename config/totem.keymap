@@ -139,8 +139,13 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &mwh SC_UP &mkp LCLK   &mmv MV_UP  &mkp RCLK   &mwh SC_LT
-                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &mwh SC_DN &mmv MV_LT  &mmv MV_DN  &mmv MV_RT  &mwh SC_RT
+//                 &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &mwh SC_UP &mkp LCLK   &mmv MV_UP  &mkp RCLK   &mwh SC_LT
+//                 &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &mwh SC_DN &mmv MV_LT  &mmv MV_DN  &mmv MV_RT  &mwh SC_RT
+//     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
+//                                          &trans      &mo ADJ1    &trans          &trans     &trans      &trans
+
+                &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &none      &none       &none       &none       &none
+                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &none      &none       &none       &none       &none
     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
                                          &trans      &mo ADJ1    &trans          &trans     &trans      &trans
                         >;
