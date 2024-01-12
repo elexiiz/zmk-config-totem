@@ -183,7 +183,7 @@ label= "ADJ2"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃   BT_2    ┃   ┃     ^     ┃     &     ┃     *     ┃     (     ┃     )     ┃   PLAY    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     ▼     ┃   TVP2    ┃     ▼     ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
+//                                     ┃     ▼     ┃     ▼     ┃     ▼     ┃   ┃     ▼     ┃     ▼     ┃     ▼     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -191,7 +191,7 @@ label= "ADJ2"                              ;
                 &sys_reset  &bt BT_CLR  &out OUT_TOG &none      &bt BT_SEL 0       &kp BSLH   &kp PIPE   &kp KP_MINUS  &kp C_NEXT  &kp C_VOL_UP
                 &bootloader &bt BT_NXT  &none        &none      &bt BT_SEL 1       &kp EQUAL  &kp UNDER  &kp KP_PLUS   &kp C_PREV  &kp C_VOL_DN  
     &none       &none       &bt BT_PRV  &none        &none      &bt BT_SEL 2       &kp CARET  &kp AMPS &kp KP_MULTIPLY &kp LPAR    &kp RPAR   &kp C_PP         
-                                        &trans       &mo TVP2   &trans             &trans     &trans     &trans
+                                        &trans       &trans     &trans             &trans     &trans     &trans
                         >;
                 };
 
