@@ -138,7 +138,7 @@ label= "SYM"                              ;
 
                 &kp F1      &kp F2      &kp F3      &kp F4      &kp LBRC         &kp RBRC    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
                 &kp F5      &kp F6      &kp F7      &kp F8      &kp LBKT         &kp RBKT    &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS
-    &kp PSCRN   &kp F9      &kp F10     &kp F11     &kp F12     &kp LPAR         &kp RPAR    &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &KP_SLASH      
+    &kp PSCRN   &kp F9      &kp F10     &kp F11     &kp F12     &kp LPAR         &kp RPAR    &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &kp KP_SLASH      
                                         &trans      &trans      &trans           &trans      &trans      &kp KP_N0
                         >;
                 };
