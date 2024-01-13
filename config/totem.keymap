@@ -16,6 +16,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
+#include "combos.dtsi"  // requires layer aliases
+#include "mouse.dtsi"
+#include "extra_keys.h"
 
 #define BASE  0
 #define NAV   1
