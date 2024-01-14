@@ -14,8 +14,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-// #include <dt-bindings/zmk/mouse.h>
-#include "mouse.dtsi"
+#include <dt-bindings/zmk/mouse.h>
+// #include "mouse.dtsi"
 // #include "combos.dtsi"  // requires layer aliases
 // #include "extra_keys.h"
 
@@ -113,8 +113,8 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK U_WH_U     U_BTN1      U_MS_U      U_BTN2      U_WH_L
-                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   U_WH_D     U_MS_L      U_MS_D      U_MS_R      U_WH_R
+                &kp CAPS     &kp HOME    &kp UP      &kp END     &kp PAUSE_BREAK &mwh SCROLL_UP   &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &mwh SCROLL_RIGHT
+                &kp KP_NLCK  &kp LEFT    &kp DOWN    &kp RIGHT   &kp LC(LS(Z))   &mwh SCROLL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mwh SCROLL_LEFT
     &kp PSCRN   &kp SLCK     &kp PG_UP   &kp INS     &kp PG_DN   &kp LC(Z)       &kp UNDER  &kp PIPE    &kp MINUS   &kp PLUS    &kp EQUAL    &kp BSLH      
                                          &trans      &mo ADJ1    &trans          &trans     &trans      &trans
                         >;
